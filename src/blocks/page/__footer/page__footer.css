@@ -1,0 +1,11 @@
+.page__footer {
+  margin: 0 auto;
+  padding-bottom: 3.75rem;
+}
+
+@media (max-width: 500px) {
+  .page__footer {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+}
