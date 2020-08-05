@@ -54,21 +54,24 @@ function App() {
       <PopupWithForm name={'profile'}
         title={'Редактировать профиль'}
         buttonText={'Сохранить'}
-        children={<PopupProfile/>}
         isOpen={isEditProfilePopupOpen}
-        close={closeAllPopups}/>
+        onClose={closeAllPopups}>
+        <PopupProfile />
+      </PopupWithForm>
       <PopupWithForm name={'images'}
         title={'Новое место'}
         buttonText={'Создать'}
-        children={<PopupNewImage/>}
         isOpen={isAddPlacePopupOpen}
-        close={closeAllPopups}/>
+        onClose={closeAllPopups}>
+        <PopupNewImage/>
+      </PopupWithForm>
       <PopupWithForm name={'avatar'}
         title={'Обновить аватар'}
         buttonText={'Сохранить'}
-        children={<PopupNewAvatar/>}
         isOpen={isEditAvatarPopupOpen}
-        close={closeAllPopups}/>
+        onClose={closeAllPopups}>
+        <PopupNewAvatar/>
+      </PopupWithForm>
       <PopupWithForm name={'del'}
         title={'Вы уверены?'}
         buttonText={'Да'}/>

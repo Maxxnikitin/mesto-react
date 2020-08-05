@@ -9,8 +9,8 @@ function PopupNewImage() {
         type="text"
         name="name"
         placeholder="Название"
-        minLength={1}
-        maxLength={30}
+        minLength="1"
+        maxLength="30"
         required
         pattern="^[A-Za-zА-ЯЁа-яё\s-]+$"
       />
