@@ -2,7 +2,7 @@ import React from 'react';
 
 function ImagePopup(props) {
   return (
-    <section className={`popup ${props.isOpen && 'popup popup_opened'}`} id={props.name}>
+    <section className={`popup ${props.isOpen && 'popup_opened'}`} id={props.name}>
       <div className="popup__overlay" />
       <figure className="popup__big-image">
         <button
