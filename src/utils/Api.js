@@ -36,7 +36,7 @@ class Api {
     });
   }
 
-  updateUserInfo(userName, userAbout) {
+  setUserInfo(userName, userAbout) {
     return fetch(`${this.baseUrl}/users/me`, {
       method: 'PATCH',
       headers: this.headers,

@@ -10,6 +10,7 @@ function PopupWithForm(props) {
         name={props.name}
         method="post"
         action="#"
+        onSubmit={props.onSubmit}
       >
         <button
           className="button button_close-item"
@@ -21,7 +22,7 @@ function PopupWithForm(props) {
           <legend className={`form__title form__title_place_${props.name}`}>{props.title}</legend>
           {props.children}
         </fieldset>
-        <button type='submit' className='button button_submit'>Сохранить</button>
+        <button onClick={props.onSubmit} type='submit' className='button button_submit'>Сохранить</button>
       </form>
     </section>
   )
