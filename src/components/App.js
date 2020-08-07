@@ -23,11 +23,12 @@ function App() {
 
   const [currentUser, setCurrentUser] = React.useState({});
   const [cards, setCards] = React.useState([]);
-  //Промис с информацией о пользователе
+  //Промисы с информацией о пользователе и с карточками
   React.useEffect(() => {
-    Promise.all([api.getUserInfo()])
-      .then(([user]) => {
+    Promise.all([api.getUserInfo(), api.getInitialCards()])
+      .then(([user, cards]) => {
         setCurrentUser(user);
+        setCards(cards);
       })
       .catch((err) => {
         console.log(err);
@@ -35,7 +36,7 @@ function App() {
   }, []);
 
   //Промис с карточками
-  React.useEffect(() => {
+  /* React.useEffect(() => {
     Promise.all([api.getInitialCards()])
       .then(([cards]) => {
         setCards(cards);
@@ -43,7 +44,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, []); */
 
   function closeAllPopups() {
     setIsEditAvatarPopupOpen(false);
