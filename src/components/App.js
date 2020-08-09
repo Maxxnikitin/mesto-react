@@ -110,6 +110,9 @@ function App() {
       const newCards = cards.map((c) => c._id === card._id ? newCard : c);
       // Обновляем стейт
       setCards(newCards);
+    })
+    .catch((err) => {
+      console.log(err);
     });
   }
 
@@ -119,6 +122,9 @@ function App() {
       const newCards = cards.filter((c) => c._id !== card._id);
       // Обновляем стейт
       setCards(newCards);
+    })
+    .catch((err) => {
+      console.log(err);
     });
   }
 
